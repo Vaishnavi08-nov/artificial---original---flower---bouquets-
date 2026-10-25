@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: bloomify-demo-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: FRONTEND_ORIGIN
+        value: http://localhost:5173
